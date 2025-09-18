@@ -1,5 +1,5 @@
 function register(){
-    // waitForTwoSec();
+    waitForTwoSec();
      return new Promise((resolve)=>{
         console.log("registration process activated");
         resolve();
@@ -7,27 +7,27 @@ function register(){
     
 }
 function SendEmail(){
-    // waitForTwoSec();
+    waitForTwoSec();
          return new Promise((resolve)=>{
         console.log("email sent");
         resolve();
     })
 }
 function login(){
-    // waitForTwoSec();
+    waitForTwoSec();
     return new Promise((resolve)=>{
         console.log("logged in");
         resolve();
     })
 }
 function getData(){
-    // waitForTwoSec();
+    waitForTwoSec();
         return new Promise((resolve)=>{
         console.log("data fetched");
         resolve();
     })}
 function Verification(){
-    // waitForTwoSec();
+    waitForTwoSec();
          return new Promise((resolve)=>{
         console.log("verified");
         resolve();
@@ -39,11 +39,28 @@ function waitForTwoSec(){
 };
 
 
-register()
-.then(SendEmail)
-.then(login)
-.then(getData)
-.then(Verification);
+// register()
+// .then(SendEmail)
+// .then(login)
+// .then(getData)
+// .then(Verification);
 
 // then is directly connected to the resolve 
 // chaining is required when the functions return something 
+
+
+
+// using asynch await function 
+async function processFlow() {
+    await register();
+    await SendEmail();
+    await login();
+    await getData();
+    await Verification();
+}
+
+processFlow();
+
+
+// await function helps in the asynchronousbehaviour 
+
