@@ -39,11 +39,11 @@ function waitForTwoSec(){
 };
 
 
-// register()
-// .then(SendEmail)
-// .then(login)
-// .then(getData)
-// .then(Verification);
+register()
+.then(SendEmail)
+.then(login)
+.then(getData)
+.then(Verification)
 
 // then is directly connected to the resolve 
 // chaining is required when the functions return something 
@@ -51,15 +51,15 @@ function waitForTwoSec(){
 
 
 // using asynch await function 
-async function processFlow() {
-    await register();
-    await SendEmail();
-    await login();
-    await getData();
-    await Verification();
-}
+// async function processFlow() {
+//     await register();
+//     await SendEmail();
+//     await login();
+//     await getData();
+//     await Verification();
+// }
 
-processFlow();
+// processFlow();
 
 
 // await function helps in the asynchronousbehaviour 
